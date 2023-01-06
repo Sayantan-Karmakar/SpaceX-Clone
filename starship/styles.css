@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mohave:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700&family=Nothing+You+Could+Do&display=swap');
+body{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-align: justify;
+    background-size: contain;
+}
+.outer_section{
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    position: absolute;
+    background-size: cover;
+}
+.outer_section>img{
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+.inner_section{
+    position: relative;
+    width: 81%;
+    height: 100vh;
+    z-index: 1;
+    padding: 0 9em 0 9em;
+}
+.section_description{
+    width: 27em;
+    position: absolute;
+    bottom: 6em; 
+}
+.show{
+    animation: fade 1.5s ease-in;
+}
+.section_description>h5{
+    font-size: 1em;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+    margin: 0;
+}
+.section_description>h1{
+    padding: 0.5em 0 0.5em 0;
+    font-size: 2.5em;
+    margin: 0;
+}
+.section_description>button {
+    position: relative;
+    width: 12em;
+    height: 4em;
+    border: #ffffff solid 2px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75em;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+.section_description>button::before{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.5s ease;
+    border-radius: 50% 50% 0 0;
+}
+.section_description>button:hover{
+    color: #000000;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+.section_description>button:hover::before{
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.5s ease;
+}
+.details{
+    padding: 0 12em 0 12em;
+    text-align: justify;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    margin:  5em 0 5em 0;
+}
+.slide_details{
+    position: relative;
+    height: 50em;
+    width: 100%;
+}
+.slide_image img{
+    height: 40em;
+    width: 95vw;
+    overflow: hidden;
+    z-index: 0;
+}
+.slide_description{
+    position: absolute;
+    top: 5em;
+    left: 0;
+    display: block;
+    width: 30em;
+    padding: 0 9em 0 9em;
+}
+.slide_description h2{
+    font-size: 3em;
+}
+.slide_description td{
+    border-bottom: #ffffff solid 1px;
+    padding: 2em;
+}
+.mars_landing{
+    top: 2em;
+    position: absolute;
+    right: 9em;
+    padding: 2em;
+}
+.bottom_button {
+    position: absolute;
+    left: 45%;
+    margin-top: -6em;
+    width: 17em;
+    height: 6em;
+    border: #ffffff solid 2px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75em;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+.bottom_button::before{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.5s ease;
+    border-radius: 50% 50% 0 0;
+}
+.bottom_button:hover{
+    color: #000000;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+.bottom_button:hover::before{
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.5s ease;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width:1000px) {
+    .nav_link{
+        display: none;
+    }
+    .outer_section, .inner_section, .section_description, .details, .slide_description{
+        padding:0;
+        margin: 0;
+    }
+}

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mohave:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700&family=Nothing+You+Could+Do&display=swap');
+
+
+body{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.outer_section{
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    position: absolute;
+    background-size: cover;
+}
+.outer_section>img{
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+.inner_section{
+    position: relative;
+    width: 81%;
+    height: 100vh;
+    z-index: 1;
+    padding: 0 9em 0 9em;
+    text-align: center;
+}
+.section_description{
+    padding: 2em;
+    background-color: rgba(0,0,0,0.6);
+    width: 27em;
+    position: absolute;
+    bottom: 15em;
+}
+.show{
+    animation: fade 1s ease-in;
+}
+.section_description_mid{
+    width: 42vw;
+    height: 26vh;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background:none;
+}
+.section_description_mid>h1{
+    font-size: 5em;
+    margin: 0;
+    font-weight: bold;
+}
+.section_description_right{
+    right: 9em;
+}
+.section_description_left{
+    left: 9em;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.content_details{
+    padding: 0 9em 0 9em;
+    justify-content: center;
+    margin: 1em 0  1em 0;
+}
+.content_details h2{
+    font-size:2em;
+}
+.details{
+    display: inline-block;
+    padding: 0 2em 0 2em;
+}
+.lower{
+    padding: 4em 2em 0 0;
+    margin: 0;
+    width: 22em;
+}
+#hr {
+    position: absolute;
+    margin: 2em 8em 2em 0;
+    left: 9em;
+    width: 80em;
+}
+button {
+    position: absolute;
+    left: 45%;
+    margin-top: 25px;
+    width: 15em;
+    height: 4em;
+    border: #ffffff solid 2px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75em;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+button::before{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.5s ease;
+    border-radius: 50% 50% 0 0;
+}
+button:hover{
+    color: #000000;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+button:hover::before{
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.5s ease;
+}
+@media screen and (max-width:1000px) {
+    .nav_link{
+        display: none;
+    }
+    .outer_section, .inner_section, .section_description, .content_details, .details{
+        padding:0;
+        margin: 0;
+    }
+}

@@ -1,0 +1,21 @@
+footer{
+    min-height: 5em;
+    width: 99.5%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7em 0 0 0;
+}
+footer>a{
+    padding: 0 1% 0 1%;
+    color: #ffffff;
+    text-decoration: none;
+}
+footer>a:hover{
+    color: #9e9e9e;
+    transition: 0.5s;
+}
+footer>span{
+    padding: 0 1% 0 1%;
+    color: #9e9e9e;
+}
